@@ -1,0 +1,81 @@
+object Form1: TForm1
+  Left = 437
+  Height = 240
+  Top = 388
+  Width = 320
+  Caption = 'SpringRTS Mapping Assistant'
+  ClientHeight = 240
+  ClientWidth = 320
+  LCLVersion = '2.0.8.0'
+  object MapCalculatorPanel: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 240
+    Top = 0
+    Width = 320
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ClientHeight = 240
+    ClientWidth = 320
+    TabOrder = 0
+    object GroupBox1: TGroupBox
+      Left = 1
+      Height = 41
+      Top = 1
+      Width = 318
+      Align = alTop
+      Caption = 'Grid Size(e.g. 4x4)'
+      ClientHeight = 21
+      ClientWidth = 314
+      TabOrder = 0
+      object GridX: TSpinEdit
+        AnchorSideRight.Control = GroupBox1
+        Left = 0
+        Height = 21
+        Top = 0
+        Width = 64
+        Align = alLeft
+        OnChange = GridXChange
+        TabOrder = 0
+      end
+      object GridY: TSpinEdit
+        Left = 88
+        Height = 21
+        Top = 0
+        Width = 64
+        Align = alLeft
+        OnChange = GridYChange
+        TabOrder = 1
+      end
+      object Label1: TLabel
+        Left = 72
+        Height = 21
+        Top = 0
+        Width = 8
+        Align = alLeft
+        BorderSpacing.Left = 8
+        BorderSpacing.Right = 8
+        Caption = 'X'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+    object CalculatorResults: TMemo
+      Left = 1
+      Height = 197
+      Top = 42
+      Width = 318
+      Align = alClient
+      Lines.Strings = (
+        'Please enter a grid size to continue.'
+      )
+      ReadOnly = True
+      TabOrder = 1
+    end
+  end
+end
